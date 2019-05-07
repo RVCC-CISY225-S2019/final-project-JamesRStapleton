@@ -1,9 +1,9 @@
 # Final project
 ## Read me
 
-This is the finished result of creating a website. 
+###This is the finished result of creating a website. 
 
-What was involved:
+####What was involved:
 1. Creating a color format which wrapped the various entities on the website together.
 2. Three pictures taken by myself.
 3. A custom logo and favicon.
