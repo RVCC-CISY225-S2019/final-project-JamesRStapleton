@@ -1,0 +1,328 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.firstcharacter {
+    color: #324;
+    float: left;
+    font-family: Roboto;
+    font-size: 75px;
+    line-height: 60px;
+    padding-top: 4px;
+    padding-right: 8px;
+    padding-left: 3px;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Roboto Condensed', sans-serif;
+    margin: 0;
+    font-size: 25px;
+    font-style: oblique;
+    font-weight: bold;
+    color: #324;
+}
+
+
+body {
+    background-color: antiquewhite;
+}
+
+input,
+textarea,
+select,
+button {
+    width: 45%;
+    margin: 0;
+    font-family: inherit;
+    font-size: 100%;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+legend {
+    overflow: hidden;
+}
+
+input:focus,
+textarea:focus {
+    background: cyan;
+    border-radius: 5px;
+    outline: none;
+}
+
+[Type="radio"] {
+    width: 10%;
+}
+
+body {
+    background: #f4f4f4;
+    height: 100vh;
+}
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+button {
+    font-family: 'Roboto', sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 170px;
+    height: 40px;
+    line-height: 1;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border: 3px solid #8C82FC;
+    background: #fff;
+    color: #8C82FC;
+    border-radius: 40px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all .35s;
+}
+
+button:hover {
+    background: #8C82FC;
+    color: #324;
+}
+
+button span {
+    opacity: 1;
+    visibility: visible;
+    transition: all .35s;
+}
+
+.success {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .35s;
+}
+
+.success svg {
+    width: 20px;
+    height: 20px;
+    fill: yellowgreen;
+    transform-origin: 50% 50%;
+    transform: translateY(-50%) rotate(0deg) scale(0);
+    transition: all .35s;
+}
+
+button.is_active {
+    width: 40px;
+    height: 40px;
+}
+
+button.is_active .success {
+    opacity: 1;
+    visibility: visible;
+}
+
+button.is_active .success svg {
+    margin-top: 50%;
+    transform: translateY(-50%) rotate(720deg) scale(1);
+}
+
+button.is_active span {
+    opacity: 0;
+    visibility: hidden;
+}
+
+#coin {
+    display: block;
+    height: 40px;
+    width: 44px;
+    background-image: url('http://www.williammalone.com/articles/create-html5-canvas-javascript-sprite-animation/images/coin-sprite-animation-sprite-sheet.png');
+    animation: flip 1s steps(10) infinite;
+}
+
+#coin1 {
+    display: block;
+    height: 40px;
+    width: 44px;
+    background-image: url('http://www.williammalone.com/articles/create-html5-canvas-javascript-sprite-animation/images/coin-sprite-animation-sprite-sheet.png');
+    animation: flip 2s steps(10) infinite;
+}
+
+@keyframes flip {
+    0% {
+        background-position: 0px 0px;
+    }
+
+    100% {
+        background-position: 440px 0px;
+    }
+}
+
+/*  grids */
+
+main {
+    display: grid;
+}
+
+/* hero content */
+
+.content {
+    display: grid;
+}
+
+.hero {
+    padding-top: 50px
+}
+
+.my-name,
+.my-location {
+    text-align: center;
+    - color: black;
+    font-weight: bold;
+}
+
+
+
+/* about content */
+
+.about-content {
+    display: grid;
+    text-align: inherit;
+
+}
+
+/*  gallery */
+
+.gallery {
+    display: grid;
+}
+
+figure {
+    display: grid;
+}
+
+/*  article */
+
+article {
+    display: grid;
+}
+
+/* form container */
+.form-container {
+    display: grid;
+}
+
+/* footer */
+
+footer {
+    display: grid;
+    text-align: center;
+}
+
+/*  layout */
+
+/*   mobile is the default layout*/
+
+/* tablet layout >=48rem (768px) */
+
+@media screen and (min-width: 48rem) {
+
+    .mobile-first {
+        display: none;
+    }
+
+    /* hero content */
+
+    .content {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .content picture,
+    .content p,
+    .about-content {
+        grid-column: 2/3;
+    }
+
+    /*	about content */
+
+    /*	gallery */
+
+    figure {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        justify-items: center;
+    }
+
+    figcaption {
+        margin-left: 2rem;
+    }
+
+    /*	article */
+
+    article,
+    .form-container {
+        grid-template-columns: 1fr 48rem 1fr;
+    }
+
+    article h1,
+    .story-body,
+    .form-container h1,
+    form {
+        grid-column: 2/3;
+    }
+
+
+
+    /*	form */
+
+
+}
+
+/* wide screen layout >=64rem (1024px) */
+
+@media screen and (min-width: 64rem) {
+
+    /*  hero content */
+
+    /*	about content */
+
+    /*	gallery */
+
+    .gallery {
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+        justify-items: center;
+
+    }
+
+    .gallery h1 {
+        grid-column: 1/4;
+    }
+
+    /*	article */
+
+    /*	form */
+
+}
